@@ -12,6 +12,15 @@ harness = false # do not use the built-in cargo test harness -> resolve rust-ana
 
 [profile.release]
 opt-level = "s"
+strip = true
+lto = true
+panic = "abort"
+
+
+# [profile.release]
+# opt-level = "s"
+
+
 
 [profile.dev]
 debug = true    # Symbols are nice, and they don't increase the size on Flash
